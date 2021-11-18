@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Crypto from './Crypto'
 
 export default function ContainerComponent() {
+    const [value, setValue] = useState('bitcoin')
+
     return (
         <div>
-            <Crypto />
+            <Crypto asset={value}/>
         </div>
     )
 }
